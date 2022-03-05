@@ -32,7 +32,7 @@ const TICK_TIME_MS: f64 = 0.016; //Tick every 16ms
 
 //Helper function for sleeping at a regular interval
 fn sleep_for_tick(last_tick: &mut f64) -> f64 {
-    let now = time::precise_time_s();
+    let now = (time::OffsetDateTime::now_utc() - time::OffsetDateTime::unix_epoch()).as_seconds_f64();
 
     let elapsed = (now - *last_tick).min(TICK_TIME_MS);
 

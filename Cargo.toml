@@ -11,6 +11,7 @@ license = "BSD-3-Clause"
 repository = "https://github.com/vvanders/netcode-rust"
 documentation = "https://docs.rs/netcode"
 description = "Wrapper for netcode.io library"
+edition = "2018"
 exclude = [
     "go/*"
 ]

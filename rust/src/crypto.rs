@@ -7,7 +7,7 @@ use std::sync::atomic;
 
 // TODO: fix me
 #[cfg_attr(feature = "cargo-clippy", allow(replace_consts))]
-static mut SODIUM_INIT: atomic::AtomicUsize = atomic::ATOMIC_USIZE_INIT;
+static mut SODIUM_INIT: atomic::AtomicUsize = atomic::AtomicUsize::new(0);
 
 pub const NETCODE_ENCRYPT_EXTA_BYTES: usize =
     libsodium_sys::crypto_aead_chacha20poly1305_ABYTES as usize;
