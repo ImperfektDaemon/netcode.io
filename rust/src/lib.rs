@@ -136,7 +136,7 @@
 //! ```
 
 #![warn(clippy::all)]
-#![feature(nll, stmt_expr_attributes)]
+#![feature(stmt_expr_attributes)]
 #![warn(rust_2018_idioms)]
 
 /*
