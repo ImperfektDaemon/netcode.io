@@ -453,6 +453,7 @@ impl PrivateData {
         R: io::Read,
     {
         let client_id = source.read_u64::<LittleEndian>()?;
+        let ttl = source.read_u32::<LittleEndian>()?;
         let hosts = HostList::read(source)?;
 
         let mut client_to_server_key = [0; NETCODE_KEY_BYTES];
